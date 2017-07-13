@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {voteVuejs, voteAngular, voteReact} from './actions';
+import * as actionCreator from './actions';
 import './App.css';
 
 class App extends Component {
@@ -21,6 +21,10 @@ class App extends Component {
 
     handleVoteVuejs = () => {
         this.props.voteVuejs()
+    }
+
+    componentDidMount = () => {
+        this.props.voteInit();
     }
 
     render() {
@@ -55,13 +59,11 @@ class App extends Component {
     }
 }
 
-const mapStateToProps = (state, ownProps) => {
-    return {
-        state
-    }
-}
+const mapStateToProps = (state) => ({state})
+
+//{voteVuejs, voteAngular, voteReact, voteInit}
 const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({voteVuejs, voteAngular, voteReact}, dispatch);
+    return bindActionCreators(actionCreator, dispatch);
 }
 
 App = connect(mapStateToProps, mapDispatchToProps)(App);

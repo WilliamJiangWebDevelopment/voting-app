@@ -49,8 +49,6 @@ class Results extends Component {
     }
 }
 
-Results = connect((state) => {
-    return {state}
-})(Results);
+Results = connect((state) => ({state}))(Results);
 
 export default Results;

@@ -15,3 +15,9 @@ export const voteVuejs = () => {
         type: 'VOTE_VUEJS'
     }
 }
+
+export const voteInit = () => {
+    return {
+        type: 'VOTE_INIT'
+    }
+}

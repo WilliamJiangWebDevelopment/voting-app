@@ -4,8 +4,16 @@ const initialState = {
     vuejs: 0
 };
 
-export default (state = initialState, action) => {
+let mountState = {};
+Object.keys(initialState).map(x => {
+    return mountState[x] = Math.floor((Math.random() * 10) + 1);
+});
+
+// = initialState
+export default (state = {}, action) => {
     switch (action.type) {
+        case 'VOTE_INIT':
+            return mountState;
         case 'VOTE_ANGULAR':
             return Object.assign({}, state, {angular: state.angular + 1});
         case 'VOTE_REACT':
