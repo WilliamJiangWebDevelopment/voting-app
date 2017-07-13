@@ -34,15 +34,18 @@ class App extends Component {
                     <br/>
                     <div className="row">
                         <div className="col-xs-offset-3 col-xs-2">
-                            <img src="angular_logo.png" height="96" title="Angular" onClick={this.handleVoteAngular}
+                            <img src="angular_logo.png" height="96" alt="Angular" title="Angular"
+                                 onClick={this.handleVoteAngular}
                                  style={{'cursor': 'pointer'}}/>
                         </div>
                         <div className="col-xs-2">
-                            <img src="react_logo.png" height="96" title="React" onClick={this.handleVoteReact}
+                            <img src="react_logo.png" height="96" alt="React" title="React"
+                                 onClick={this.handleVoteReact}
                                  style={{'cursor': 'pointer'}}/>
                         </div>
                         <div className="col-xs-2">
-                            <img src="vuejs_logo.png" height="96" title="VueJS" onClick={this.handleVoteVuejs}
+                            <img src="vuejs_logo.png" height="96" alt="VueJS" title="VueJS"
+                                 onClick={this.handleVoteVuejs}
                                  style={{'cursor': 'pointer'}}/>
                         </div>
                     </div>

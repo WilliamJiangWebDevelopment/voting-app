@@ -14,4 +14,4 @@ $ open http://localhost:3000
 
 ## Screenshot
 
-![screenshot](./public/screen1.png){height="360px" width="430px"}
+![screenshot](./public/screen1.png)
