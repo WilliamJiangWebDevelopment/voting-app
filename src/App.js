@@ -7,7 +7,7 @@ import './App.css';
 class App extends Component {
 
     getTotal() {
-        var t = this.props.state;
+        var t = this.props.votes;
         return Object.keys(t).reduce((a, b) => a + t[b], 0)
     }
 
@@ -59,7 +59,7 @@ class App extends Component {
     }
 }
 
-const mapStateToProps = (state) => ({state})
+const mapStateToProps = (state) => ({votes: state.votes})
 
 //{voteVuejs, voteAngular, voteReact, voteInit}
 const mapDispatchToProps = (dispatch) => {

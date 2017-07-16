@@ -10,7 +10,7 @@ Object.keys(initialState).map(x => {
 });
 
 // = initialState
-export default (state = {}, action) => {
+export function voteReducer(state = {}, action) {
     switch (action.type) {
         case 'VOTE_INIT':
             return mountState;
@@ -24,4 +24,8 @@ export default (state = {}, action) => {
             return state;
 
     }
+}
+
+export const todoReducer = (state = [], action) => {
+    return state;
 }
